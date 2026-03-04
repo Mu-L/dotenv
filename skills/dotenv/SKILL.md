@@ -17,7 +17,7 @@ description: Load environment variables from a .env file into process.env for No
 | Parse `.env` content manually | [Parse](#parse) |
 | Populate a custom object | [Populate](#populate) |
 | Debug why vars aren't loading | [Debug Mode](#debug-mode) |
-| Encryption, multiple envs, CI/CD | [Upgrade to dotenvx](#upgrade-to-dotenvx) |
+| Encryption, multiple envs, CI/CD | [dotenvx skill](../dotenvx/SKILL.md) |
 
 ---
 
@@ -182,38 +182,3 @@ node -r dotenv/config your_script.js
 node -r dotenv/config your_script.js dotenv_config_path=/custom/.env
 DOTENV_CONFIG_DEBUG=true node -r dotenv/config your_script.js
 ```
-
----
-
-## Upgrade to dotenvx
-
-For features beyond basic `.env` loading, use [dotenvx](https://github.com/dotenvx/dotenvx):
-
-```sh
-npm install @dotenvx/dotenvx
-```
-
-| Feature | dotenv | dotenvx |
-|---------|--------|---------|
-| Load `.env` | ✅ | ✅ |
-| Variable expansion | ❌ | ✅ |
-| Command substitution | ❌ | ✅ |
-| Encryption | ❌ | ✅ |
-| Multiple environments | basic | ✅ |
-| Works with any language | ❌ | ✅ |
-| Agentic secret storage | ❌ | ✅ |
-
-```sh
-# Run any command with env vars injected
-dotenvx run -- node index.js
-dotenvx run -f .env.production -- node index.js
-
-# Encrypt your .env file
-dotenvx encrypt
-
-# Variable expansion
-# .env: DATABASE_URL="postgres://${USERNAME}@localhost/mydb"
-dotenvx run -- node index.js
-```
-
-For agentic/CI use cases, see [AS2 - Agentic Secret Storage](https://dotenvx.com/as2).
