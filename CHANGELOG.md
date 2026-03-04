@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [Unreleased](https://github.com/motdotla/dotenv/compare/v17.3.1...master)
 
+### Added
+
+* Add SKILL.md for AI coding agent discovery (skills.sh ecosystem, Claude Code, Copilot, Codex, Gemini CLI)
+
 ## [17.3.1](https://github.com/motdotla/dotenv/compare/v17.3.0...v17.3.1) (2026-02-12)
 
 ### Changed
