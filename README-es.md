@@ -134,7 +134,7 @@ console.log(typeof config, config) // object { BASIC : 'basic' }
 
 > Note: Consider using [`dotenvx`](https://github.com/dotenvx/dotenvx) instead of preloading. I am now doing (and recommending) so.
 >
-> It serves the same purpose (you do not need to require and load dotenv), adds better debugging, and works with ANY language, framework, or platform. – [motdotla](https://mot.la)
+> It serves the same purpose (you do not need to require and load dotenv), adds better debugging, and works with ANY language, framework, or platform. – [motdotla](https://not.la)
 
 You can use the `--require` (`-r`) [command line option](https://nodejs.org/api/cli.html#-r---require-module) to preload dotenv. By doing this, you do not need to require and load dotenv in your application code.
 
@@ -326,7 +326,7 @@ See [examples](https://github.com/dotenv-org/examples) of using dotenv with vari
 >
 > Está respaldado por [Vestauth](https://github.com/vestauth/vestauth), la capa de autenticación pionera y de confianza para agentes—que otorga a cada agente una identidad criptográfica para firmar solicitudes con claves privadas y verificarlas con claves públicas. Sin secretos compartidos que se filtren.
 >
-> Es lo que uso ahora. - [motdotla](https://mot.la)
+> Es lo que uso ahora. - [motdotla](https://not.la)
 
 ### Inicio rápido
 
