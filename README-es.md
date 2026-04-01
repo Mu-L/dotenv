@@ -246,7 +246,7 @@ $ dotenvx run -f=.env.local -f=.env -- node index.js
 Hello local
 ```
 
-[more environment examples](https://dotenvx.com/docs/quickstart/environments)
+[more environment examples](https://dotenvx.com/docs/quickstart/environments?utm_source=github&utm_medium=readme-es&utm_campaign=motdotla-dotenv&utm_content=docs-environments)
 
 </details>
 <details><summary>Production</summary><br>
@@ -462,7 +462,7 @@ require('dotenv').config({ override: true })
 </details>
 <details><summary>How can I prevent committing my `.env` file to a Docker build?</summary><br/>
 
-Use the [docker prebuild hook](https://dotenvx.com/docs/features/prebuild).
+Use the [docker prebuild hook](https://dotenvx.com/docs/features/prebuild?utm_source=github&utm_medium=readme-es&utm_campaign=motdotla-dotenv&utm_content=docs-prebuild).
 
 ```bash
 # Dockerfile
