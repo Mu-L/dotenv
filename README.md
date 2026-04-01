@@ -29,12 +29,18 @@ SECRET_KEY="YOURSECRETKEYGOESHERE"
 And as early as possible in your application, import and configure dotenv:
 
 ```javascript
+// index.js
 require('dotenv').config() // or import 'dotenv/config' if you're using ES6
 ...
 console.log(process.env) // remove this after you've confirmed it is working
 ```
 
 That's it. `process.env` now has the keys and values you defined in your `.env` file:
+
+```sh
+$ node index.js
+◇ injecting env (14) from .env
+```
 
 &nbsp;
 
