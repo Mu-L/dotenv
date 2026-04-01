@@ -329,19 +329,14 @@ t.test('displays random tips from the tips array', ct => {
   // Test that the tip contains one of our expected tip messages
   let foundExpectedTip = false
   const expectedTips = [
-    '🔐 encrypt with Dotenvx: https://dotenvx.com',
-    '🔐 prevent committing .env to code: https://dotenvx.com/precommit',
-    '🔐 prevent building .env in docker: https://dotenvx.com/prebuild',
-    '🤖 agentic secret storage: https://dotenvx.com/as2',
-    '⚡️ secrets for agents: https://dotenvx.com/as2',
-    '🛡️ auth for agents: https://vestauth.com',
-    '🛠️  run anywhere with `dotenvx run -- yourcommand`',
-    '⚙️  specify custom .env file path with { path: \'/custom/path/.env\' }',
-    '⚙️  enable debug logging with { debug: true }',
-    '⚙️  override existing env vars with { override: true }',
-    '⚙️  suppress all logs with { quiet: true }',
-    '⚙️  write to custom object with { processEnv: myObject }',
-    '⚙️  load multiple .env files with { path: [\'.env.local\', \'.env\'] }'
+    '◈ encrypted .env [www.dotenvx.com]',
+    '◈ secrets for agents [www.dotenvx.com]',
+    '⌁ auth for agents [www.vestauth.com]',
+    '⌘ custom filepath { path: \'/custom/path/.env\' }',
+    '⌘ enable debugging { debug: true }',
+    '⌘ override existing { override: true }',
+    '⌘ suppress logs { quiet: true }',
+    '⌘ multiple files { path: [\'.env.local\', \'.env\'] }'
   ]
 
   for (const call of logStub.getCalls()) {
@@ -390,19 +385,14 @@ t.test('displays random tips from the tips array with fallback for isTTY false',
   // Test that the tip contains one of our expected tip messages
   let foundExpectedTip = false
   const expectedTips = [
-    '🔐 encrypt with Dotenvx: https://dotenvx.com',
-    '🔐 prevent committing .env to code: https://dotenvx.com/precommit',
-    '🔐 prevent building .env in docker: https://dotenvx.com/prebuild',
-    '🤖 agentic secret storage: https://dotenvx.com/as2',
-    '⚡️ secrets for agents: https://dotenvx.com/as2',
-    '🛡️ auth for agents: https://vestauth.com',
-    '🛠️  run anywhere with `dotenvx run -- yourcommand`',
-    '⚙️  specify custom .env file path with { path: \'/custom/path/.env\' }',
-    '⚙️  enable debug logging with { debug: true }',
-    '⚙️  override existing env vars with { override: true }',
-    '⚙️  suppress all logs with { quiet: true }',
-    '⚙️  write to custom object with { processEnv: myObject }',
-    '⚙️  load multiple .env files with { path: [\'.env.local\', \'.env\'] }'
+    '◈ encrypted .env [www.dotenvx.com]',
+    '◈ secrets for agents [www.dotenvx.com]',
+    '⌁ auth for agents [www.vestauth.com]',
+    '⌘ custom filepath { path: \'/custom/path/.env\' }',
+    '⌘ enable debugging { debug: true }',
+    '⌘ override existing { override: true }',
+    '⌘ suppress logs { quiet: true }',
+    '⌘ multiple files { path: [\'.env.local\', \'.env\'] }'
   ]
 
   for (const call of logStub.getCalls()) {
