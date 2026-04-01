@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [Unreleased](https://github.com/motdotla/dotenv/compare/v17.3.1...master)
 
+### Added
+
+* Add `skills/` folder with focused agent skills: `skills/dotenv/SKILL.md` (core usage) and `skills/dotenvx/SKILL.md` (encryption, multiple environments, variable expansion) for AI coding agent discovery via the skills.sh ecosystem (`npx skills add motdotla/dotenv`)
+
 ## [17.3.1](https://github.com/motdotla/dotenv/compare/v17.3.0...v17.3.1) (2026-02-12)
 
 ### Changed
