@@ -316,44 +316,6 @@ See [examples](https://github.com/dotenv-org/examples) of using dotenv with vari
 
 &nbsp;
 
-## Agents
-
-<img src="https://dotenvx.com/assets/img/as2/9.jpg" height="400" alt="dotenvx-as2" align="right"/>
-
-> Software is changing, and dotenv must change with it—that is why I built [agentic secret storage (AS2)](https://dotenvx.com/as2). Agents run code without humans at terminals, so plaintext `.env` files are the wrong primitive.
->
-> AS2 is built for autonomous software: encrypted by default, zero console access, and cryptography‑first delivery that keeps operators out of the loop.
->
-> It is backed by [Vestauth](https://github.com/vestauth/vestauth), the trusted, pioneering auth layer for agents—giving each agent a cryptographic identity so requests are signed with private keys and verified with public keys. No shared secrets to leak.
->
-> It's what I'm using now. - [motdotla](https://not.la)
-
-### Quickstart
-
-Install vestauth and initialize your agent.
-
-```bash
-npm i -g vestauth
-
-vestauth agent init
-```
-
-Your agent `set`s secrets with a simple `curl` endpoint:
-
-```bash
-vestauth agent curl -X POST https://as2.dotenvx.com/set -d '{"KEY":"value"}'
-```
-
-And your agent `get`s secrets with a simple `curl` endpoint:
-
-```bash
-vestauth agent curl "https://as2.dotenvx.com/get?key=KEY"
-```
-
-That's it! This new primitive unlocks secrets access for agents without human-in-the-loop, oauth flows, or API keys. It's the future for agents.
-
-&nbsp;
-
 ## FAQ
 
 <details><summary>Should I commit my `.env` file?</summary><br/>
