@@ -95,3 +95,13 @@ t.same(NPayload, expectedPayload, 'can parse (\\n) line endings')
 
 const RNPayload = dotenv.parse(Buffer.from('SERVER=localhost\r\nPASSWORD=password\r\nDB=tests\r\n'))
 t.same(RNPayload, expectedPayload, 'can parse (\\r\\n) line endings')
+
+t.equal(parsed.EXPORT_IS_DECLARED, 'parsed', 'ignores export keyword')
+
+t.equal(parsed.EXPORT_IS_DECLARED_WITH_SPACING, 'parsed', 'ignores export keyword and spacing')
+
+t.equal(parsed.EXPORT_IS_DECLARED_WITH_SOME_VALUE, 'some_value', 'ignores export keyword and parses value')
+
+t.equal(parsed.EXPORT_IS_DECLARED_WITH_SOME_VALUE_SPACED, 'some_value', 'ignores export keyword and parses value with spacing')
+
+t.equal(parsed.EXPORT_IS_DECLARED_WITH_SOME_VALUE_AND_SPACING, 'some_value', 'ignores export keyword and parses value with spacing')
