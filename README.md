@@ -603,7 +603,6 @@ HELLO=World
 
 ```sh
 $ node index.js
-◇ injecting env (1) from .env // tip: ⌘ suppress logs { quiet: true } · dotenv@17.0.0
 Hello World
 ```
 
