@@ -1,4 +1,4 @@
-import { config, parse } from "dotenv";
+import { config, parse, populate, DotenvPopulateInput } from "dotenv";
 
 const env = config();
 const dbUrl: string | null =
@@ -22,3 +22,11 @@ config({
   // make sure the type accepts process.env (it didn't in the past)
   processEnv: process.env,
 });
+
+// populate() should accept DotenvPopulateOptions (debug + override only),
+// not the broader DotenvConfigOptions
+const target: DotenvPopulateInput = {};
+populate(target, { DB_HOST: "localhost" });
+populate(target, { DB_HOST: "localhost" }, { debug: true });
+populate(target, { DB_HOST: "localhost" }, { override: true });
+populate(target, { DB_HOST: "localhost" }, { debug: true, override: false });
