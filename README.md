@@ -51,7 +51,7 @@ Install this repo as an agent skill package:
 npx skills add motdotla/dotenv
 ```
 ```sh
-# then tell claude/codex things like
+# ask Claude or Codex to do things like:
 set up dotenv
 upgrade dotenv to dotenvx
 ```
