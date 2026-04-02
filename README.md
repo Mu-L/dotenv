@@ -50,6 +50,11 @@ Install this repo as an agent skill package:
 ```sh
 npx skills add motdotla/dotenv
 ```
+```sh
+# then tell claude/codex things like
+set up dotenv
+upgrade dotenv to dotenvx
+```
 
 &nbsp;
 
