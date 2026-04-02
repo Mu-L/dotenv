@@ -43,6 +43,16 @@ That's it. `process.env` now has the keys and values you defined in your `.env` 
 
 &nbsp;
 
+## Agent Usage
+
+Install this repo as an agent skill package:
+
+```sh
+npx skills add motdotla/dotenv
+```
+
+&nbsp;
+
 ## Advanced
 
 <details><summary>ES6</summary><br>
