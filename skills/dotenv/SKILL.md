@@ -180,7 +180,7 @@ console.log('DATABASE_URL', process.env.DATABASE_URL)
 ```
 ```sh
 $ dotenvx run --debug -- node index.js
-[dotenvx@0.14.1] injecting env (2) from .env
+[dotenvx@0.14.1] injected env (2) from .env
 DATABASE_URL postgres://username@localhost/my_database
 ```
 
@@ -201,7 +201,7 @@ console.log('DATABASE_URL', process.env.DATABASE_URL)
 ```
 ```sh
 $ dotenvx run --debug -- node index.js
-[dotenvx@0.14.1] injecting env (1) from .env
+[dotenvx@0.14.1] injected env (1) from .env
 DATABASE_URL postgres://yourusername@localhost/my_database
 ```
 
@@ -217,7 +217,7 @@ $ dotenvx set HELLO Production -f .env.production
 $ echo "console.log('Hello ' + process.env.HELLO)" > index.js
 
 $ DOTENV_PRIVATE_KEY_PRODUCTION="<.env.production private key>" dotenvx run -- node index.js
-[dotenvx] injecting env (2) from .env.production
+[dotenvx] injected env (2) from .env.production
 Hello Production
 ```
 
@@ -645,7 +645,7 @@ HELLO=World
 
 ```sh
 $ node index.js
-[dotenv@17.0.0] injecting env (1) from .env
+[dotenv@17.0.0] injected env (1) from .env
 Hello World
 ```
 

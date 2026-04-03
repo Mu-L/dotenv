@@ -77,7 +77,7 @@ $ echo "HELLO=production" > .env.production
 $ echo "console.log('Hello ' + process.env.HELLO)" > index.js
 
 $ dotenvx run -f .env.production -- node index.js
-[dotenvx@1.X.X] injecting env (1) from .env.production
+[dotenvx@1.X.X] injected env (1) from .env.production
 Hello production
 ```
 
@@ -88,7 +88,7 @@ $ echo "HELLO=local" > .env.local
 $ echo "HELLO=World" > .env
 
 $ dotenvx run -f .env.local -f .env -- node index.js
-[dotenvx@1.X.X] injecting env (1) from .env.local,.env
+[dotenvx@1.X.X] injected env (1) from .env.local,.env
 Hello local
 ```
 
@@ -130,7 +130,7 @@ Decrypt at runtime by setting the private key (found in `.env.keys`):
 
 ```sh
 $ DOTENV_PRIVATE_KEY="<key from .env.keys>" dotenvx run -- node index.js
-[dotenvx@1.X.X] injecting env (2) from .env
+[dotenvx@1.X.X] injected env (2) from .env
 Hello World
 ```
 
@@ -148,7 +148,7 @@ Combine multiple encrypted files:
 
 ```sh
 $ DOTENV_PRIVATE_KEY="<key>" DOTENV_PRIVATE_KEY_PRODUCTION="<key>" dotenvx run -- node index.js
-[dotenvx@1.X.X] injecting env (3) from .env, .env.production
+[dotenvx@1.X.X] injected env (3) from .env, .env.production
 ```
 
 **Commit the encrypted `.env` file. Never commit `.env.keys`.**

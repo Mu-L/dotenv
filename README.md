@@ -36,7 +36,7 @@ console.log(process.env) // remove this after you've confirmed it is working
 ```
 ```sh
 $ node index.js
-◇ injecting env (14) from .env
+◇ injected env (14) from .env
 ```
 
 That's it. `process.env` now has the keys and values you defined in your `.env` file.
@@ -198,7 +198,7 @@ console.log('DATABASE_URL', process.env.DATABASE_URL)
 ```
 ```sh
 $ dotenvx run --debug -- node index.js
-⟐ injecting env (2) from .env · dotenvx@1.59.1
+⟐ injected env (2) from .env · dotenvx@1.59.1
 DATABASE_URL postgres://username@localhost/my_database
 ```
 
@@ -219,7 +219,7 @@ console.log('DATABASE_URL', process.env.DATABASE_URL)
 ```
 ```sh
 $ dotenvx run --debug -- node index.js
-⟐ injecting env (1) from .env · dotenvx@1.59.1
+⟐ injected env (1) from .env · dotenvx@1.59.1
 DATABASE_URL postgres://yourusername@localhost/my_database
 ```
 
@@ -235,7 +235,7 @@ $ dotenvx set HELLO Production -f .env.production
 $ echo "console.log('Hello ' + process.env.HELLO)" > index.js
 
 $ DOTENV_PRIVATE_KEY_PRODUCTION="<.env.production private key>" dotenvx run -- node index.js
-⟐ injecting env (2) from .env.production · dotenvx@1.59.1
+⟐ injected env (2) from .env.production · dotenvx@1.59.1
 Hello Production
 ```
 
