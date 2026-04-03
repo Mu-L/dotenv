@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [Unreleased](https://github.com/motdotla/dotenv/compare/v17.4.0...master)
 
+### Changed
+
+* Text change `injecting` to `injected` ([#1005](https://github.com/motdotla/dotenv/pull/1005))
+
 ## [17.4.0](https://github.com/motdotla/dotenv/compare/v17.3.1...v17.4.0) (2026-04-01)
 
 ### Added
