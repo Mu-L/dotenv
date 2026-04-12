@@ -77,8 +77,6 @@ import dotenv from 'dotenv'
 dotenv.config({ path: '/custom/path/to/.env' })
 ```
 
-Need to pass options like `quiet: true`? See the [FAQ below](#how-do-i-specify-config-options-with-es6-import) for common patterns. 😊
-
 </details>
 <details><summary>bun</summary><br>
 
@@ -425,70 +423,6 @@ There are two alternatives to this approach:
 2. Create a separate file that will execute `config` first as outlined in [this comment on #133](https://github.com/motdotla/dotenv/issues/133#issuecomment-255298822)
 </details>
 
-<details><summary>How do I specify config options with ES6 import?</summary><br/>
-
-This trips up a lot of folks (myself included the first time 😅). When using `import 'dotenv/config'`, you can't pass options directly. Here are a few practical ways to handle it:
-
-**Option 1: Import and call `config()` yourself (Recommended)**
-
-```javascript
-// index.mjs
-import dotenv from 'dotenv'
-
-dotenv.config({
-  quiet: true,
-  path: '/custom/path/to/.env',
-  debug: true
-})
-
-// Now import everything else
-import express from 'express'
-```
-
-⚠️ **Heads up:** Because ES6 imports are hoisted, put the `dotenv` import and `config()` call at the very top, before any other imports that rely on `process.env`.
-
-**Option 2: Use environment variables**
-
-```bash
-DOTENV_CONFIG_QUIET=true DOTENV_CONFIG_PATH=/custom/path/to/.env node index.mjs
-```
-
-Then in your code you can keep the shorthand:
-
-```javascript
-import 'dotenv/config'
-```
-
-**Option 3: A tiny wrapper file**
-
-Create `load-env.mjs`:
-
-```javascript
-import dotenv from 'dotenv'
-dotenv.config({ quiet: true })
-```
-
-Then in your main file:
-
-```javascript
-import './load-env.mjs'
-import express from 'express'
-```
-
-Not the most elegant, but it works reliably when hoisting gets in the way.
-
-**Quick reference for config options:**
-
-| Option | Type | Description |
-|--------|------|-------------|
-| `path` | string | Path to your `.env` file |
-| `encoding` | string | File encoding (default: `utf8`) |
-| `debug` | boolean | Turn on debug logging |
-| `override` | boolean | Override existing env vars |
-| `quiet` | boolean | Suppress all console output |
-
-</details>
-
 <details><summary>Can I customize/write plugins for dotenv?</summary><br/>
 
 Yes! `dotenv.config()` returns an object representing the parsed `.env` file. This gives you everything you need to continue setting values on `process.env`. For example:
@@ -537,6 +471,59 @@ Remove it, [remove git history](https://docs.github.com/en/authentication/keepin
 npm i -g @dotenvx/dotenvx
 dotenvx precommit --install
 ```
+
+</details>
+
+<details><summary>How do I specify config options with ES6 import?</summary><br/>
+
+When using `import 'dotenv/config'`, you can't pass options directly. Here are a few ways to handle it.
+
+**Option 1: Import and call `config()` yourself (Recommended)**
+
+```javascript
+// index.mjs
+import dotenv from 'dotenv'
+
+dotenv.config({
+  path: '/custom/path/to/.env',
+  debug: true
+})
+
+// Now import everything else
+import express from 'express'
+```
+
+Because ES6 imports are hoisted, put the `dotenv` import and `config()` call at the very top, before any other imports that rely on `process.env`.
+
+**Option 2: Use environment variables**
+
+```bash
+DOTENV_CONFIG_DEBUG=true DOTENV_CONFIG_PATH=/custom/path/to/.env node index.mjs
+```
+
+Then in your code you can keep the shorthand:
+
+```javascript
+import 'dotenv/config'
+```
+
+**Option 3: A tiny wrapper file**
+
+Create `load-env.mjs`:
+
+```javascript
+import dotenv from 'dotenv'
+dotenv.config({ path: '/custom/path/to/.env', debug: true })
+```
+
+Then in your main file:
+
+```javascript
+import './load-env.mjs'
+import express from 'express'
+```
+
+Not the most elegant, but it works reliably when hoisting gets in the way.
 
 </details>
 <details><summary>What happens to environment variables that were already set?</summary><br/>
