@@ -22,21 +22,23 @@ Create a `.env` file in the root of your project:
 
 ```ini
 # .env
-S3_BUCKET="YOURS3BUCKET"
-SECRET_KEY="YOURSECRETKEYGOESHERE"
+HELLO="Dotenv"
+OPENAI_API_KEY="your-api-key-goes-here"
 ```
 
-And as early as possible in your application, import and configure dotenv:
+As early as possible in your application, import and configure dotenv:
 
 ```javascript
 // index.js
-require('dotenv').config() // or import 'dotenv/config' if you're using ES6
-...
-console.log(process.env) // remove this after you've confirmed it is working
+require('dotenv').config()
+// or import 'dotenv/config' // for esm
+
+console.log(`Hello ${process.env.HELLO}`)
 ```
 ```sh
 $ node index.js
-◇ injected env (14) from .env
+◇ injected env (2) from .env
+Hello Dotenv
 ```
 
 That's it. `process.env` now has the keys and values you defined in your `.env` file.
