@@ -6,7 +6,7 @@ metadata:
   author: motdotla
   version: "1.0.0"
   homepage: https://dotenvx.com
-  source: https://github.com/motdotla/dotenv
+  source: https://github.com/dotenvx/dotenvx
 
 ---
 
