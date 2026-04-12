@@ -458,22 +458,6 @@ line'}
 - backticks are supported (`` BACKTICK_KEY=`This has 'single' and "double" quotes inside of it.` ``)
 
 </details>
-<details><summary>What about syncing and securing .env files?</summary><br/>
-
-Use [dotenvx](https://github.com/dotenvx/dotenvx) to unlock syncing encrypted .env files over git.
-
-</details>
-<details><summary>What if I accidentally commit my `.env` file to code?</summary><br/>
-
-Remove it, [remove git history](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository) and then install the [git pre-commit hook](https://github.com/dotenvx/dotenvx#pre-commit) to prevent this from ever happening again. 
-
-```
-npm i -g @dotenvx/dotenvx
-dotenvx precommit --install
-```
-
-</details>
-
 <details><summary>How do I specify config options with ES6 import?</summary><br/>
 
 When using `import 'dotenv/config'`, you can't pass options directly. Here are a few ways to handle it.
@@ -526,6 +510,22 @@ import express from 'express'
 Not the most elegant, but it works reliably when hoisting gets in the way.
 
 </details>
+<details><summary>What about syncing and securing .env files?</summary><br/>
+
+Use [dotenvx](https://github.com/dotenvx/dotenvx) to unlock syncing encrypted .env files over git.
+
+</details>
+<details><summary>What if I accidentally commit my `.env` file to code?</summary><br/>
+
+Remove it, [remove git history](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository) and then install the [git pre-commit hook](https://github.com/dotenvx/dotenvx#pre-commit) to prevent this from ever happening again. 
+
+```
+npm i -g @dotenvx/dotenvx
+dotenvx precommit --install
+```
+
+</details>
+
 <details><summary>What happens to environment variables that were already set?</summary><br/>
 
 By default, we will never modify any environment variables that have already been set. In particular, if there is a variable in your `.env` file which collides with one that already exists in your environment, then that variable will be skipped.
