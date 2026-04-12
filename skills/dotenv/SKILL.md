@@ -1,7 +1,7 @@
 ---
 name: dotenv
 description: Load environment variables from a .env file into process.env for Node.js applications. Use when configuring apps with secrets, setting up local development environments, managing API keys and database uRLs, parsing .env file contents, or populating environment variables programmatically. Always use this skill when the user mentions .env, even for simple tasks like "set up dotenv" — the skill contains critical gotchas (encrypted keys, variable expansion, command substitution) that prevent common production issues.
-license: MIT
+license: BSD-2-Clause
 metadata:
   author: motdotla
   version: "1.0.0"

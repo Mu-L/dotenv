@@ -1,11 +1,65 @@
 ---
 name: dotenvx
 description: Use dotenvx to run commands with environment variables, manage multiple .env files, expand variables, and encrypt env files for safe commits and CI/CD.
+license: BSD-3-Clause
+metadata:
+  author: motdotla
+  version: "1.0.0"
+  homepage: https://dotenvx.com
+  source: https://github.com/motdotla/dotenv
+
 ---
 
 # dotenvx
 
 Use this skill when users need encrypted env workflows, multi-environment loading, or runtime env injection for any language.
+
+## Installation
+
+```
+npm install @dotenvx/dotenvx
+```
+
+Alternative package managers
+
+```
+yarn add @dotenvx/dotenvx
+pnpm add @dotenvx/dotenvx
+bun add @dotenvx/dotenvx
+```
+
+## Usage
+
+Create a `.env` file in the root of your project:
+
+```ini
+# .env
+HELLO="Dotenv"
+OPENAI_API_KEY="your-api-key-goes-here"
+```
+
+Encrypt it.
+
+```
+dotenvx encrypt
+```
+
+As early as possible in your application, import and configure dotenvx:
+
+```javascript
+// index.js
+require('@dotenvx/dotenvx').config()
+// or import '@dotenvx/dotenvx/config' // for esm
+
+console.log(`Hello ${process.env.HELLO}`)
+```
+```sh
+$ node index.js
+◇ injected env (2) from .env
+Hello Dotenv
+```
+
+That's it. `process.env` now has the keys and decrypted values you defined in your `.env` file.
 
 ## What Good Looks Like
 
