@@ -458,6 +458,11 @@ line'}
 - backticks are supported (`` BACKTICK_KEY=`This has 'single' and "double" quotes inside of it.` ``)
 
 </details>
+<details><summary>What about syncing and securing .env files?</summary><br/>
+
+Use [dotenvx](https://github.com/dotenvx/dotenvx) to unlock syncing encrypted .env files over git.
+
+</details>
 <details><summary>How do I specify config options with ES6 import?</summary><br/>
 
 When using `import 'dotenv/config'`, you can't pass options directly. Here are a few ways to handle it.
@@ -508,11 +513,6 @@ import express from 'express'
 ```
 
 Not the most elegant, but it works reliably when hoisting gets in the way.
-
-</details>
-<details><summary>What about syncing and securing .env files?</summary><br/>
-
-Use [dotenvx](https://github.com/dotenvx/dotenvx) to unlock syncing encrypted .env files over git.
 
 </details>
 <details><summary>What if I accidentally commit my `.env` file to code?</summary><br/>
