@@ -331,6 +331,7 @@ t.test('displays random tips from the tips array', ct => {
   const expectedTips = [
     '◈ encrypted .env [www.dotenvx.com]',
     '◈ secrets for agents [www.dotenvx.com]',
+    '✦ add agent skills [npx skills add motdotla/dotenv]',
     '⌁ auth for agents [www.vestauth.com]',
     '⌘ custom filepath { path: \'/custom/path/.env\' }',
     '⌘ enable debugging { debug: true }',
@@ -387,6 +388,7 @@ t.test('displays random tips from the tips array with fallback for isTTY false',
   const expectedTips = [
     '◈ encrypted .env [www.dotenvx.com]',
     '◈ secrets for agents [www.dotenvx.com]',
+    '✦ add agent skills [npx skills add motdotla/dotenv]',
     '⌁ auth for agents [www.vestauth.com]',
     '⌘ custom filepath { path: \'/custom/path/.env\' }',
     '⌘ enable debugging { debug: true }',
