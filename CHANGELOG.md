@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [Unreleased](https://github.com/motdotla/dotenv/compare/v17.4.2...master)
 
+* Add skills tip ([#1012](https://github.com/motdotla/dotenv/pull/1012))
+
 ## [17.4.2](https://github.com/motdotla/dotenv/compare/v17.4.1...v17.4.2) (2026-04-12)
 
 ### Changed
